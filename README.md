@@ -1,29 +1,39 @@
-# README #
+# Installation
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## pull the monitor's source code
 
-### What is this repository for? ###
+```
+git clone https://bitbucket.org/blocktest_testnet/blockchainmonitor
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+cd blockchainmonitor
+```
 
-### How do I get set up? ###
+## build docker images
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+`./build.sh`
+  
+cd monitor-docker
 
-### Contribution guidelines ###
+## setup monitor's configuration. Sample: ./setup.sh 127.0.0.1 5
 
-* Writing tests
-* Code review
-* Other guidelines
+`./setup.sh {ip} {number of nodes}`
 
-### Who do I talk to? ###
+## run monitor
 
-* Repo owner or admin
-* Other community or team contact
+```
+docker-compose up -d
+```
+
+The default monitor’s url is http://{ip}, for example: http://localhost
+
+💡It takes about 30 seconds to synchronize all blocks.
+
+#Cleanup
+
+## remove the monitor
+
+`docker-compose down -v`
+
+## remove the monitor's configuration
+
+`./cleanup.sh`
