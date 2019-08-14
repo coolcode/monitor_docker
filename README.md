@@ -8,14 +8,6 @@ git clone https://github.com/coolcode/monitor_docker
 cd monitor_docker
 ```
 
-build docker images
-
-```
-./build.sh
-```
-
-cd monitor-docker
-
 setup monitor's configuration. Sample: ./setup.sh 127.0.0.1 5
 
 ```
