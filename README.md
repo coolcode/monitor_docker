@@ -5,7 +5,7 @@ pull the monitor's source code
 ```
 git clone https://github.com/coolcode/monitor_docker
 
-cd blockchainmonitor
+cd monitor_docker
 ```
 
 build docker images
