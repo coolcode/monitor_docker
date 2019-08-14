@@ -3,20 +3,24 @@
 pull the monitor's source code
 
 ```
-git clone https://bitbucket.org/blocktest_testnet/blockchainmonitor
+git clone https://github.com/coolcode/monitor_docker
 
 cd blockchainmonitor
 ```
 
 build docker images
 
-`./build.sh`
+```
+./build.sh
+```
 
 cd monitor-docker
 
 setup monitor's configuration. Sample: ./setup.sh 127.0.0.1 5
 
-`./setup.sh {ip} {number of nodes}`
+```
+./setup.sh {ip} {number of nodes}
+```
 
 run monitor
 
@@ -32,8 +36,12 @@ The default monitor’s url is http://{ip}, for example: http://localhost
 
 remove the monitor
 
-`docker-compose down -v`
+```
+docker-compose down -v
+```
 
 remove the monitor's configuration
 
-`./cleanup.sh`
+```
+./cleanup.sh
+```
